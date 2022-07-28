@@ -1,0 +1,110 @@
+from platform import python_build
+
+
+a="python"
+print(a.index("o"))                             # 4
+print(a.index("p"))                             # 0
+print(a.index("c"))                             #sub string not found 
+print(a.index[0])                                 # object is not found
+a="python pro"
+print(a.index('p'))                                 # 0
+print(a.index('p',1))                               # 7
+print(a.index("o"))                                 # 4
+print(a.index('o',5))                               # 9
+print(a.index("o",-1))                              # 9
+
+print(a.rindex("p"))                                # 7
+print(a.rindex("o"))                                # 9
+
+a="python pro"
+print(a.find('p'))                                    # 0
+print(a.find('o'))                                    # 4
+print(a.find('k'))                                    # -1  
+print(a.find('p',1))                                  #7
+print(a.find('o',5))                                  # 9
+print(a.find(' '))                                    # 6
+print(a.rfind('p'))                                   # 7
+print(a.rfind('k'))                                    # -1
+
+a="mobile boot"
+print(a.count('m'))                                     # 1
+print(a.count('b'))                                     # 2
+print(a.count('o'))                                     # 3 
+print(a.count('k'))                                     # 0
+print(a.count('o',4))                                   # 2
+
+a="hey 1234"
+print(a.isalpha())                                    # False
+                                   
+a="hey1234"
+print(a.isalpha())                                    # False
+
+a="hey.1234"
+print(a.isalpha())                                    # False
+
+a="hey code"
+print(a.isalpha())                                    # False
+
+a="heycode"
+print(a.isalpha())                                    # True
+
+a="hey 123"
+print(a.isalnum())                                     # False
+a="hey123"
+print(a.isalnum())                                      # True
+a="heybye"
+print(a.isalnum())                                      # True
+a="123hai"
+print(a.isalnum())                                      # True
+a=" sai123"
+print(a.isalnum())                                       # False
+a='_sai123'
+print(a.isalnum())                                      # False
+
+a="hey 123"
+print(a.isdigit())                                       # False
+a=" 123"
+print(a.isdigit())                                       # False
+a="123"
+print(a.isdigit())                                        # True
+a="1.2,3.5"
+print(a.isdigit())                                         # False
+a="12 32"
+print(a.isdigit())                                          # false 
+a="1202222"
+print(a.isdigit())                                         # True
+
+a='help'
+print('*'.join(a))                                     # h*e*l*p
+
+print(1,2,3,4,sep="_")                               # 1-2-3-4
+
+print(1,2,3,4,sep=(""))                               #  1234
+
+print('h''e''l''p',sep="_")                           # help
+
+print("_".join("hello"))                             # h_e_l_l_o
+
+a='hello'
+print(a.startswith(''))                              # True
+print(a.startswith(' '))                             # false
+print(a.startswith("h"))                             # true
+print(a.startswith("12"))                            # False
+
+a='hello'
+print(a.endswith(''))                                      # True
+print(a.endswith('o'))                                     # True
+print(a.endswith(' '))                                     # Flase
+
+a='123'
+print(a.zfill(2))                                            # 123
+print(a.zfill(3))                                            # 123
+print(a.zfill(4))                                            # 0123
+print(a.zfill(6))                                            # 000123
+
+a="hello hell"
+print(a.removeprefix('h'))                                     # ello hell
+print(a.removeprefix('he'))                                    # llo hell   
+print(a.removeprefix('y'))                                     # hello hell
+print(a.removeprefix('  '))                                    # hello hell
+
